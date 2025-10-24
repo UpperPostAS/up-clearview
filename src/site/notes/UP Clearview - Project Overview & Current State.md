@@ -2,8 +2,8 @@
 {"dg-publish":true,"permalink":"/up-clearview-project-overview-and-current-state/","dgShowToc":true}
 ---
 
-**Version:** Wednesday Work - October 23, 2025
-**Status:** Active Development - 75% Complete
+**Version:** Final Development Session - October 24, 2025
+**Status:** Active Development - 85% Complete
 
 ---
 
@@ -36,10 +36,11 @@ UP Clearview replaces manual tracking across multiple tools with a centralized s
 
 ## Current Completion Status
 
-**Overall Progress:** 80%
-- **Core Functionality:** 80% complete (browse, view, edit, navigate)
-- **Workflows:** 75% complete (phone screening done, close-out done, convert to resident done, intake in progress)
-- **Provider & Account Management:** 80% complete (basic CRUD working, some association features pending)
+**Overall Progress:** 85%
+- **Core Functionality:** 90% complete (browse, view, edit, navigate all working well)
+- **Workflows:** 80% complete (phone screening done, close-out done, convert to resident done, exit resident with logging done, intake form still needed)
+- **Provider & Account Management:** 80% complete (basic CRUD working, inline provider creation from associations still pending)
+- **Exit Logging:** ✅ **NEW - COMPLETE** (Exits list captures all resident and referral departures)
 
 ---
 
@@ -83,8 +84,12 @@ UP Clearview replaces manual tracking across multiple tools with a centralized s
   - Active/inactive status toggles
   - **Note:** Password storage needs to be addressed before full deployment
 
-- ✅ **Archived Records** - Former resident storage
-  - **Note:** Archiving workflow needs refinement
+- ✅ **Exits** - Exit and close-out logging (formerly "Archived Records")
+  - **NEW:** Comprehensive tracking of all departures
+  - Fields: Title (name), Stage (Resident/Applicant/Referral), Exit/Close-Out Date, Close-Out Reason, Notes
+  - Automatically populated when residents exit or referrals are closed out
+  - Supports future ETO integration and historical reporting
+  - **Status:** Fully implemented and tested (October 24, 2025)
 
 ### 1.2 Application Screens (13 screens)
 
@@ -158,6 +163,42 @@ UP Clearview replaces manual tracking across multiple tools with a centralized s
   - Provider details (name, role, program, organization)
   - Links to organization via lookup field
 
+### 1.2.1 Detailed Screen Status (Testing Results - October 24, 2025)
+
+**Fully Functional Screens:**
+- ✅ **ResBrowseScreen** - Tested extensively, working great
+- ✅ **ResInfoScreen** - No issues, includes working exit workflow with exit record creation
+- ✅ **UnitBrowseScreen** - Working great, vacancy filter now includes units with notice given
+- ✅ **RNABrowseScreen** - Working great (Referrals & Applicants browse)
+- ✅ **RNACloseScreen** - Extensive testing completed, fully functional
+  - Creates Exit record with correct Stage parsing (Applicant vs Referral)
+  - Properly clears unit referral data
+  - Deletes referral record after archiving
+
+**Screens with Known Issues:**
+- ⚠️ **RNAInfoScreen** - Phone screening section has some issues
+  - Main functionality works
+  - Phone screening form needs review
+  - Otherwise operational
+
+**Screens Needing Completion:**
+- ⚠️ **IntakeScreen** - Displays eligibility but lacks data entry form
+  - Shows requirements correctly
+  - Form implementation still required
+  - Critical blocker for deployment
+
+**Screens Needing Integration:**
+- ⚠️ **scrResidentAssociations** - Service provider addition interface not integrated
+  - Can view and select existing providers
+  - Cannot add new service provider from this screen (must use SharePoint)
+  - Workaround functional but not ideal user experience
+
+**Convert to Resident Workflow:**
+- ✅ **scrConvert** - Not yet tested after recent updates
+  - Recently completed implementation
+  - Needs testing to verify all fields transfer correctly
+  - Should be ready but requires validation
+
 ### 1.3 Key Features Implemented
 
 **Data Quality Improvements:**
@@ -182,13 +223,17 @@ UP Clearview replaces manual tracking across multiple tools with a centralized s
 - ✅ Pre-populated with referral information
 - ✅ Saves screening data to Referrals & Applicants list
 
-**Close-Out Workflow:**
+**Close-Out Workflow:** ✅ **COMPLETED WITH EXIT LOGGING (October 24, 2025)**
 - ✅ Form with close-out date, reason, and notes
-- ✅ Automatic household status transition (adds "Former" prefix to current status)
-- ✅ Unit cleanup: clears Referral Household, sets Has referral = false
-- ✅ Data source refresh and navigation back to browse screen
+- ✅ **NEW:** Creates Exit record capturing all close-out data
+  - Parses household status to determine Stage (Applicant vs Referral)
+  - Stores close-out date, reason, and notes for historical tracking
+- ✅ Unit cleanup: clears Referral Household, sets Has referral = false, clears Referral Requested
+- ✅ Removes referral/applicant record after archiving to Exit list
+- ✅ Success notification and navigation back to browse screen
+- **Testing Status:** Extensively tested, fully operational
 
-**Convert to Resident Workflow:** ✅ **JUST COMPLETED (October 24, 2025)**
+**Convert to Resident Workflow:** ✅ **COMPLETED (October 24, 2025)**
 - ✅ scrConvert screen with referral data review
 - ✅ Input fields for lease date, coordinator, and service providers
 - ✅ Creates Current Resident record with all referral data
@@ -199,6 +244,17 @@ UP Clearview replaces manual tracking across multiple tools with a centralized s
 - ✅ Navigates to new resident's info page in edit mode
 - ✅ Success notification displayed
 - **Key Learning:** Built using progressive debugging approach - started with minimal fields, added one at a time to identify field type mismatches
+- **Testing Status:** Implementation complete, validation testing pending
+
+**Exit Resident Workflow:** ✅ **COMPLETED WITH EXIT LOGGING (October 24, 2025)**
+- ✅ Exit confirmation modal on ResInfoScreen
+- ✅ **NEW:** Creates Exit record before removing resident
+  - Captures resident name, stage ("Resident"), exit date (today)
+  - Provides archive for historical tracking and ETO integration
+- ✅ Updates unit record (clears Occupant Household, sets Is occupied = false)
+- ✅ Removes resident from Current Residents list
+- ✅ Success notification and navigation to browse screen
+- **Testing Status:** Extensively tested, fully operational
 
 **Data Display:**
 - ✅ Color-coded unit type palette system
@@ -245,23 +301,40 @@ UP Clearview replaces manual tracking across multiple tools with a centralized s
 
 ---
 
-**Priority 2: Household Members Section**
+**Priority 2: Household Members / Family Associations**
 
-**Current State:** Not yet started, planned for Friday
+**Current State:** Not yet implemented
 
-**Fix Required:**
-- Create Participants list if not exists (or use existing)
-- Link Participants to Current Residents (household composition)
-- Build gallery and form for household members
+**Required:**
+- Create or link to Participants/Household Members list
+- Build gallery and form in scrResidentAssociations
+- Link household members to Current Residents
 - Add/edit/remove functionality
 
 **Impact:** Cannot track household composition (affects occupancy calculations, HMIS reporting)
 **Time Estimate:** 4-6 hours
-**Priority:** HIGH - needed for compliance
+**Priority:** HIGH - needed for compliance and accurate tracking
 
 ---
 
-**Priority 3: Missing OnSuccess Handlers**
+**Priority 3: Service Provider Addition from Association Screen**
+
+**Issue:** Cannot add new service providers inline from scrResidentAssociations
+
+**Current State:** Can view and select existing providers, but must use SharePoint to create new ones
+
+**Fix Required:**
+- Add modal form or inline creation interface
+- Auto-select newly created provider
+- Integrate into association workflow
+
+**Impact:** Must use SharePoint directly to add providers (functional but not ideal UX)
+**Time Estimate:** 2-3 hours
+**Priority:** MEDIUM - workaround exists
+
+---
+
+**Priority 4: Missing OnSuccess Handlers**
 
 **Issue:** Some forms lack save confirmation/refresh logic
 
@@ -280,41 +353,7 @@ UP Clearview replaces manual tracking across multiple tools with a centralized s
 
 ---
 
-**Priority 4: Exit Resident Workflow Completion**
-
-**Current State:** Archives resident but doesn't clean up unit properly
-
-**Missing:**
-- Update resident's Household Status to "Former Occupant"
-- Clear unit's Occupant Household field
-- Set unit's Is occupied = false
-- Update unit's Date Available to today
-
-**Impact:** Units remain marked as occupied, data integrity issues
-**Time Estimate:** 2-3 hours
-**Priority:** HIGH
-
----
-
-**Priority 5: Service Provider/Organization Creation**
-
-**Issue:** Cannot add new providers or organizations through the app interface
-
-**Likely Cause:** SharePoint permissions or Azure AD/Entra ID configuration
-
-**Fix Required:**
-- Check SharePoint list permissions (need "Add" permission)
-- Verify Power Apps connection has proper delegated permissions
-- May need Azure AD app registration updates
-- Test with different user roles
-
-**Impact:** Must use SharePoint directly to add providers (poor user experience)
-**Time Estimate:** 2-4 hours (mostly troubleshooting permissions)
-**Priority:** MEDIUM
-
----
-
-**Priority 6: Password Management Solution**
+**Priority 5: Password Management Solution**
 
 **Issue:** Account Information list contains plain-text passwords
 
@@ -335,28 +374,27 @@ UP Clearview replaces manual tracking across multiple tools with a centralized s
 
 ---
 
-**Priority 7: Archiving Refinement**
+**Priority 6: Data Capture Design for ETO Integration**
 
-**Issue:** Archiving process needs improvement
+**Current State:** Exit logging and referral receive workflows are functional
 
-**Current State:**
-- Archived Records list exists
-- Exit resident workflow archives data
-- Format and completeness need review
+**Planning Needed:**
+- Determine what data should be captured in "Receive Referral" workflow
+- Identify which fields in Exits list would facilitate ETO integration
+- Consider what additional data points are needed for reporting
 
-**Fix Required:**
-- Review what data gets archived
-- Ensure archive format is useful for future reference
-- Consider if former residents should be soft-deleted (status change) vs hard-deleted (removed from list)
-- Verify referral close-out archiving works correctly
+**Next Steps:**
+- Begin trial use of receive referral workflow
+- Collect feedback on data needs
+- Plan integration points
 
-**Impact:** Historical data may not be properly preserved
-**Time Estimate:** 2-3 hours
-**Priority:** MEDIUM
+**Impact:** Prepares system for external integrations
+**Time Estimate:** Planning/discussion phase
+**Priority:** MEDIUM - preparation for future work
 
 ---
 
-**Priority 8: Hide Empty Fields in View Mode**
+**Priority 7: Hide Empty Fields in View Mode**
 
 **Current State:** All fields show in info screens regardless of whether they contain data
 
@@ -517,29 +555,46 @@ UP Clearview replaces manual tracking across multiple tools with a centralized s
 
 ## SUMMARY & NEXT STEPS
 
-### Current State
-Upper Post Clearview is a functional supportive housing management application at 80% completion. The core browse/view/edit functionality works well across all three main views (Units, Referrals & Applicants, Residents). Service provider and account management features are largely complete. Critical workflows like phone screening, referral close-out, and convert to resident are operational.
+### Current State (October 24, 2025)
+Upper Post Clearview is a functional supportive housing management application at **85% completion**. The core browse/view/edit functionality works excellently across all three main views (Units, Referrals & Applicants, Residents). Service provider and account management features are largely complete.
+
+**Major Milestone Achieved:** Exit logging is now fully implemented - both resident exits and referral close-outs create archive records in the Exits list, capturing name, stage, date, reason, and notes for historical tracking and future ETO integration.
+
+**Tested & Working Well:**
+- ResBrowseScreen, ResInfoScreen with exit workflow
+- UnitBrowseScreen with vacancy filter (now includes units with notice)
+- RNABrowseScreen
+- RNACloseScreen (referral close-out) with exit logging
+- Convert to Resident workflow (pending validation testing)
+
+**Known Issues:**
+- RNAInfoScreen phone screening section needs review
+- IntakeScreen lacks data entry form (critical blocker)
+- Service provider creation must be done in SharePoint (workaround functional)
 
 ### Immediate Priorities (Before Deployment)
-1. Complete IntakeScreen functionality
-2. Implement household members section
-3. Add OnSuccess handlers and user notifications
-4. Resolve password management for account tracking
-5. Complete exit resident workflow cleanup
-6. Develop comprehensive testing suite
+1. **Complete IntakeScreen functionality** (6-8 hours) - Critical blocker
+2. **Implement household members/family associations** (4-6 hours) - Compliance requirement
+3. **Validate Convert to Resident workflow** (1-2 hours testing) - Just completed, needs verification
+4. **Service provider inline creation** (2-3 hours) - UX improvement
+5. **Add OnSuccess handlers** (1-2 hours) - User feedback
+6. **Resolve password management** (1-2 hours) - Security
+7. **Plan data capture for ETO integration** - Ongoing discussion
 
-### Quick Win: Account Management
-The account tracking interface can be deployed immediately once a password management solution is in place. Staff can use browser-built password managers (Chrome, Edge, Firefox all have this capability) while the password field is removed from the SharePoint list. This provides immediate value for Housing Support bill pay tracking.
+### Ready for Trial Use
+- **Receive Referral workflow** - Begin using and gathering feedback on data needs
+- **Exit tracking** - Fully functional, ready for ETO integration planning
+- **Close-out workflow** - Extensively tested and operational
 
 ### Timeline to Deployment
 With focused development effort:
-- **Critical workflow (Intake):** 6-8 hours
-- **Missing features (Household members, OnSuccess handlers):** 6-8 hours
-- **Exit workflow fix:** 2-3 hours
-- **Testing suite development:** 4-8 hours
-- **Polish (notifications, empty field hiding):** 3-4 hours
+- **Critical workflows (Intake, testing):** 8-10 hours
+- **Household members implementation:** 4-6 hours
+- **Service provider integration:** 2-3 hours
+- **OnSuccess handlers and notifications:** 2-3 hours
+- **Testing and validation:** 4-6 hours
 
-**Total estimated effort:** 21-31 hours of development + testing time
+**Estimated remaining effort:** 20-28 hours of development + comprehensive testing
 
 ### Contact
 While I may no longer be working for CommonBond come Friday, I would be happy to provide any support leading to implementation of this platform. Feel free to contact me at 971-716-4690 or jb_miles@berkeley.edu
