@@ -6,11 +6,11 @@
 
 ---
 
-## What is UP Clearview?
+## About This Guide
 
-UP Clearview is designed to simplify workflows and make it easy to find information that service providers need throughout a participant's entire time receiving services from CommonBond Communities—beginning before we even know who that participant is.
+This document is the day-in-the-life walkthrough for service staff. It follows a participant from the moment a unit opens through move-out, highlighting which UP Clearview screens and workflows support each step. For overall project status, start at the [[UP Clearview - Project Overview & Current State\|documentation index]]. If you need implementation details, hop to the [[UP Clearview – Technical Documentation\|technical manual]] or the [[UP Clearview – Data Sources\|data source reference]].
 
-When we learn that a unit has become available, the first step is being able to see all the information needed to make an accurate referral request and knowing where to make that request. From there, UP Clearview tracks the participant through phone screening, intake, residency, service connections, and eventual move-out, keeping all relevant information in one accessible place.
+UP Clearview sits alongside existing CommonBond processes; this guide shows how the app keeps information in one place so staff always know the next action.
 
 ---
 
@@ -48,7 +48,7 @@ After saving, you're taken directly to the referral's information page.
 
 ### 3. Referrals & Applicants View and Information Pages
 
-The **Referrals & Applicants view** shows all participants who are recieving pre-housing services from CommonBond aimed at securing housing in a vacant unit at Upper Post. Click on any referral to access their information page. At the top are workflow buttons:
+The **Referrals & Applicants view** shows all participants who are receiving pre-housing services from CommonBond aimed at securing housing in a vacant unit at Upper Post. Click on any referral to access their information page. At the top are workflow buttons:
 
 ### 4. Referral & Applicant Workflows
 
@@ -66,7 +66,7 @@ From the moment we receive a referral, we maintain and build awareness of extern
 
 Associated service providers are visible both on the information page and on a separate page called Resident Associations.
 
-On the associations page, clicking on any service provider wkll bring up their contact information, program, and organizational affiliation. Navigate to the Organizations view to see agency contact details and the providers affiliated with each organization.
+On the associations page, clicking on any service provider will bring up their contact information, program, and organizational affiliation. Navigate to the Organizations view to see agency contact details and the providers affiliated with each organization.
 
 ### 6. They Become a Resident
 
@@ -78,9 +78,9 @@ Click on any resident to see their information:
 - Lease dates, case numbers, household size
 - Any notes or relevant information
 
-Information can be edited as needed. New fields should be added as providers voice their needs. Whatever information staff may find useful at a glace could be integrated thru the introduction of new optional fields.
+Information can be edited as needed. New fields should be added as providers voice their needs. Whatever information staff may find useful at a glance could be integrated through the introduction of new optional fields.
 
-### 6. Housing Support Bill Pay (Resident Accounts)
+### 7. Housing Support Bill Pay (Resident Accounts)
 
 For Housing Support participants, the **Resident Accounts** section tracks information about accounts with various providers (utilities, internet, etc.). This includes usernames, account numbers, billing frequency, and recurring costs.
 
@@ -93,11 +93,11 @@ Toggle "Is Payable Account" to show billing fields only for accounts CommonBond 
 
 **Note:** Password security should be addressed before full deployment. Interim solution is using browser-based password managers.
 
-### 7. Associated Family Members
+### 8. Associated Family Members
 
 For family units, the **Household Members section** (beginning development on Friday) will track everyone living in the unit—names, ages, relationships. Currently, this information lives in Yardi or on other intake paperwork and doesn't provide the level of detail most helpful for service coordination. UP Clearview will allow staff to add or remove household members as composition changes and track information relevant to service delivery.
 
-### 8. Move-Out
+### 9. Move-Out
 
 When a participant exits, the **"Move Out" function** on their info page archives their record for future reference and removes them from the active residents list. The unit becomes available for the next referral.
 
@@ -121,6 +121,8 @@ When a participant exits, the **"Move Out" function** on their info page archive
 
 **User notifications** will provide confirmation messages when actions are saved successfully.
 
+For prioritization details and owners, refer to the [[UP Clearview - Development Roadmap\|Development Roadmap]].
+
 ---
 
 ## Future Capabilities
@@ -143,6 +145,8 @@ As UP Clearview develops, additional functionality will enhance workflow efficie
 
 **Workflow Automation**: Continued development of automated workflows will handle more of the tedious administrative tasks, allowing staff to spend time on direct service provision rather than data management.
 
+To help test new functionality as it ships, keep the [[UP Clearview - Testing Guide\|testing guide]] handy.
+
 ---
 
 ## The Bottom Line
@@ -154,6 +158,8 @@ UP Clearview brings participant information together in one place and provides w
 ## Data Sources & Schemas
 
 UP Clearview stores its operational data in SharePoint lists within the `site-510-upv-upper-post-veterans-homes` site. Each list backs one or more screens in the app and is designed to track a specific part of the participant journey. Field names reflect what is surfaced in Power Apps today and should be validated against the live list configuration before making schema changes.
+
+For the full column-by-column breakdown, jump to the [[UP Clearview – Data Sources\|data source reference]].
 
 ### Cross-Cutting Patterns
 - Lookup columns tie lists together (e.g., units point to unit types, referrals point to units, residents point to both units and service providers).

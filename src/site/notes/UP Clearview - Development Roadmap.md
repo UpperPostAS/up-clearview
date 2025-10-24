@@ -6,29 +6,14 @@
 
 ---
 
-## Document Overview
+## About This Roadmap
 
-This document consolidates all remaining development tasks for Upper Post Clearview:
-- Bug fixes for implemented features
-- Completion of in-progress features
-- Creation of planned features
-- Polish and optimization
+This document tracks outstanding development work—bug fixes, in-flight features, planned enhancements, and polish tasks—for the current UP Clearview build. Pair it with the [[UP Clearview - Project Overview & Current State\|project overview]] to understand context before diving into specific assignments.
 
-**Current Status:** 80% Complete
+**Current Status:** 80% Complete  
 **Estimated Remaining Effort:** 21-31 hours
 
----
-
-## Table of Contents
-
-1. [Critical Path (Pre-Deployment)](#critical-path-pre-deployment)
-2. [Bug Fixes for Implemented Features](#bug-fixes-for-implemented-features)
-3. [In-Progress Features to Complete](#in-progress-features-to-complete)
-4. [Planned Features to Build](#planned-features-to-build)
-5. [Polish and User Experience](#polish-and-user-experience)
-6. [Testing and Quality Assurance](#testing-and-quality-assurance)
-7. [Performance and Optimization](#performance-and-optimization)
-8. [Post-Deployment Enhancements](#post-deployment-enhancements)
+Need the technical underpinnings of an item? Follow the links into the [[UP Clearview – Technical Documentation\|technical manual]] or the [[UP Clearview – Data Sources\|data source reference]] as you work.
 
 ---
 

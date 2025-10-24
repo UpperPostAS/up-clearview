@@ -4,7 +4,9 @@
 
 **SharePoint lists powering the application**
 
-All operational data for Upper Post Clearview lives in SharePoint at `site-510-upv-upper-post-veterans-homes`. The CSV exports in `data/` reflect the current list schemas. Field types below come from the embedded SharePoint `ListSchema`; any cells that look like JSON arrays (for multi-select choices) or expanded lookup columns reflect how SharePoint formats exports.
+## About This Reference
+
+All operational data for Upper Post Clearview lives in SharePoint at `site-510-upv-upper-post-veterans-homes`. The CSV exports in `data/` reflect the current list schemas. Field types below come from the embedded SharePoint `ListSchema`; any cells that look like JSON arrays (for multi-select choices) or expanded lookup columns reflect how SharePoint formats exports. Pair this reference with the [[UP Clearview – Technical Documentation\|technical documentation]] when wiring formulas or workflows, and check the [[UP Clearview - Development Roadmap\|roadmap]] for pending schema updates.
 
 ## Account Information
 Tracks service accounts tied to a resident so staff can pay bills and reference credentials.
@@ -86,4 +88,3 @@ Inventory of physical units and their real-time status.
 - `Service Providers.Organization` values pair with `Agencies.Agency Name`; agencies display their linked providers through the `Service Providers` view column.
 
 Confirm each lookup in SharePoint list settings before editing formulas or automations, especially where the export currently shows plain text (e.g., `Participant`, `Organization`). Those fields are expected to be configured as lookups even if the CSV renders display values only.
-

@@ -6,20 +6,9 @@
 
 ---
 
-## Table of Contents
+## About This Guide
 
-1. [Testing Philosophy](#testing-philosophy)
-2. [Progressive Debugging Strategy](#progressive-debugging-strategy)
-3. [Pre-Testing Setup](#pre-testing-setup)
-4. [Unit Testing by Screen](#unit-testing-by-screen)
-5. [Workflow Testing](#workflow-testing)
-6. [Integration Testing](#integration-testing)
-7. [Edge Case Testing](#edge-case-testing)
-8. [Performance Testing](#performance-testing)
-9. [User Acceptance Testing](#user-acceptance-testing)
-10. [Regression Testing](#regression-testing)
-11. [Test Data Management](#test-data-management)
-12. [Bug Reporting Template](#bug-reporting-template)
+Use this guide to plan, execute, and document testing for UP Clearview. It captures the progressive debugging philosophy we use in development, detailed checklists by screen, and templates for reporting issues. For open development tasks, cross-reference the [[UP Clearview - Development Roadmap\|development roadmap]]; for schema specifics, see the [[UP Clearview – Data Sources\|data source reference]].
 
 ---
 

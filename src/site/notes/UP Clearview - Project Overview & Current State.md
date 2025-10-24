@@ -7,65 +7,47 @@
 
 ---
 
-## INTRODUCTION
+## Welcome to UP Clearview
 
-Upper Post Clearview is a supportive housing operations management tool designed to make it easier for staff to have the information they need to do their jobs and potentially integrate with other systems in the future. The application consolidates scattered spreadsheet data into an integrated Power Apps solution, providing three core views—Units, Referrals & Applicants, and Current Residents—with comprehensive workflow support and service provider management.
+UP Clearview is CommonBond Communities' in-house operations hub for supportive housing. The app centralizes everything staff need—unit availability, referral pipeline, resident records, service providers, and bill-pay details—so teams can move people into housing faster and keep services coordinated without digging through spreadsheets.
+
+This page is the entry point into the documentation set. Start here to understand the latest product snapshot, then follow the linked guides for deeper dives.
+
+## Documentation Map
+
+- [[UP Clearview - Introduction\|Participant Journey Guide]] — Walks through the participant lifecycle in the app so front-line staff can see how Clearview supports day-to-day work.
+- [[UP Clearview – Technical Documentation\|Technical Architecture Manual]] — Explains canvas-app structure, variables, and engineering patterns for maintainers.
+- [[UP Clearview – Data Sources\|Data Source Reference]] — Defines every SharePoint list and lookup powering the app.
+- [[UP Clearview - Implementation Guide\|Implementation Playbook]] — Outlines how to replicate Clearview at another site, from schema prep to launch.
+- [[UP Clearview - Development Roadmap\|Development Roadmap]] — Tracks outstanding build work, priorities, and estimates.
+- [[UP Clearview - Testing Guide\|Testing Guide]] — Provides testing strategy, checklists, and debugging approaches for each workflow.
+
+Each linked document keeps to its focus area; circle back here any time you need orientation or quick status context.
+
+## Platform Snapshot
+
+UP Clearview consolidates scattered spreadsheet data into an integrated Power Apps solution spanning three core views—Units, Referrals & Applicants, and Current Residents—with comprehensive workflow support and service provider management.
 
 ### Purpose & Vision
 
-UP Clearview replaces manual tracking across multiple spreadsheets with a centralized system that:
+UP Clearview replaces manual tracking across multiple tools with a centralized system that:
 - Provides quick access to resident, unit, and referral information
 - Supports key workflows (phone screening, intake, referrals, close-outs)
 - Tracks service provider connections and account information
 - Maintains housing unit inventory with eligibility requirements
-- Enables data integration with HMIS and other systems
+- Lays groundwork for integration with HMIS and other systems
 
 ### How It Works
 
-**Residents View**
-The Current Residents tab displays all occupied units and their occupants, with color-coded unit types for quick visual identification. Staff can:
-- Browse occupied units with resident names and unit types
-- Dive into resident information pages showing key details called upon regularly
-- Edit resident information directly from the page
-- Exit residents from UP Clearview
-- Access bill pay information for Housing Support program participants
-- View connected service providers
-- See household members for family units (upcoming feature)
+**Residents View** — Shows occupied units and resident profiles with color-coded unit types. Staff can edit records, exit residents, review bill-pay data, and manage service provider associations. Household member tracking is next on deck.
 
-**Referrals & Applicants View**
-This view shows people who have been referred or have applied for current or upcoming vacant units. The layout is optimized for the referral process:
-- Browse all active referrals and applicants (former referrals filtered out)
-- Access detailed referral information with a different layout than residents
-- Use workflow buttons for common tasks:
-  - **Phone Screening Workflow** (complete) - Guides staff through phone screening questions
-  - **Intake Workflow** (in progress) - Will process intake documentation and requirements
-  - **Convert to Resident Workflow** (complete) - Converts referral to resident upon move-in with automatic unit updates
-  - **Close-Out Referral Workflow** (complete) - Documents declined/withdrawn referrals with automatic status updates
+**Referrals & Applicants View** — Optimized for the referral pipeline with workflow buttons for Phone Screening, Intake (in progress), Convert to Resident, and Close-Out. Former referrals stay archived but out of the active gallery.
 
-**Units View**
-The Units page can be filtered to show all units or only current and upcoming vacancies. Each unit displays:
-- **Left panel (static information):**
-  - Unit details (bedrooms, ADA status, unit type)
-  - Administrative information (HMIS Program ID, subsidy administrator, referral source)
-  - Eligibility information (income limits, occupancy requirements, homelessness criteria, disability documentation)
-  - Everything needed when requesting a referral
+**Units View** — Combines static eligibility details with real-time status. Staff can filter for vacancies, trigger "Receive Referral," and see who lives in or has been matched to each unit without leaving the screen.
 
-- **Right panel (dynamic status):**
-  - Current occupant (if occupied)
-  - Referral information (if referral received)
-  - "Receive Referral" workflow button (when applicable)
-  - Date referral requested
-  - Expected availability date (if offline)
+**Service Provider & Account Management** — Brings provider contacts, organizational affiliations, and bill-pay accounts into one interface so staff can coordinate services and handle Housing Support billing on schedule.
 
-**Service Provider & Account Management**
-The associations interface connects residents with associated records:
-- **Bill Pay Accounts:** Track usernames, billing information, and payment schedules for Housing Support participants
-- **Service Providers:** Link residents to case managers and support organizations
-  - Browse service providers with organizational affiliations
-  - View provider details (name, role, program, contact information)
-  - Access organization information (agency name, services provided, contacts)
-
-### Current Completion Status
+## Current Completion Status
 
 **Overall Progress:** 80%
 - **Core Functionality:** 80% complete (browse, view, edit, navigate)

@@ -6,30 +6,9 @@
 
 ---
 
-## Table of Contents
+## About This Manual
 
-1. [Introduction](#introduction)
-2. [Critical Development Philosophy: Progressive Debugging](#critical-development-philosophy-progressive-debugging)
-3. [Application Architecture](#application-architecture)
-4. [Power Apps Components & Control Types](#power-apps-components--control-types)
-5. [Variable Management](#variable-management)
-6. [Data Flow & Lookup Field Handling](#data-flow--lookup-field-handling)
-7. [Screen-by-Screen Functionality Review](#screen-by-screen-functionality-review)
-8. [Workflow Implementation Status](#workflow-implementation-status)
-9. [Testing Strategy](#testing-strategy)
-10. [Known Issues & Bugs](#known-issues--bugs)
-11. [Development Roadmap](#development-roadmap)
-
----
-
-## Introduction
-
-This document provides comprehensive technical documentation for the Upper Post Clearview Power Apps canvas application. It is intended for developers, maintainers, and technical staff who need to understand, modify, or extend the application.
-
-**Companion Documents:**
-- `UP_Clearview_User_Introduction.md` - End-user guide and feature overview
-- `UP_Clearview_Project_Overview.md` - Project status, priorities, and deployment roadmap
-- `UP_Clearview_Data_Sources.md` - SharePoint list schemas and field definitions
+This manual documents the Upper Post Clearview Power Apps canvas application for developers and maintainers. Use it alongside the [[UP Clearview - Introduction\|participant journey guide]] for workflow context, the [[UP Clearview – Data Sources\|data source reference]] for SharePoint schemas, and the [[UP Clearview - Development Roadmap\|development roadmap]] for current priorities.
 
 This document focuses on:
 - **How** the application is built (architecture, components, patterns)

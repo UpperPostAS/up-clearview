@@ -6,27 +6,9 @@
 
 ---
 
-## Table of Contents
+## About This Guide
 
-1. [Introduction](#introduction)
-2. [Lessons Learned from Upper Post](#lessons-learned-from-upper-post)
-3. [Selecting Your Implementation Site](#selecting-your-implementation-site)
-4. [Pre-Deployment Planning](#pre-deployment-planning)
-5. [SharePoint Schema Design Best Practices](#sharepoint-schema-design-best-practices)
-6. [Data Collection and Migration Strategy](#data-collection-and-migration-strategy)
-7. [SharePoint List Creation and Data Import](#sharepoint-list-creation-and-data-import)
-8. [Site Size Considerations](#site-size-considerations)
-9. [Step-by-Step Adaptation Process](#step-by-step-adaptation-process)
-10. [Field Customization by Site](#field-customization-by-site)
-11. [Testing Checklist for New Sites](#testing-checklist-for-new-sites)
-12. [Common Pitfalls and Solutions](#common-pitfalls-and-solutions)
-13. [Maintenance and Updates](#maintenance-and-updates)
-
----
-
-## Introduction
-
-Upper Post Clearview was built for a specific site with specific needs. However, the core functionality—tracking units, referrals, residents, and service connections—is relevant to many supportive housing sites. This guide shows you how to adapt the app for other sites with minimal pain.
+This guide shows how to deploy UP Clearview at a new supportive housing site. It captures lessons from Upper Post, highlights schema decisions that matter, and lays out a repeatable rollout plan. Before starting a new implementation, review the [[UP Clearview – Data Sources\|data source reference]] for the latest schemas and the [[UP Clearview - Testing Guide\|testing guide]] for launch validation steps.
 
 **Key Insight:** Starting at a smaller site may actually be easier and allow you to refine the approach before deploying to larger, more complex sites.
 
