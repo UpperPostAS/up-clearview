@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/up-clearview-technical-documentation/"}
+{"dg-publish":true,"permalink":"/up-clearview-technical-documentation/","dgShowToc":true}
 ---
 
 **Power Apps Canvas Application Development Guide**

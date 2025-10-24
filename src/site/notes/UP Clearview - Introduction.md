@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/up-clearview-introduction/"}
+{"dg-publish":true,"permalink":"/up-clearview-introduction/","dgShowToc":true}
 ---
 
 **Supporting participants throughout their entire journey**

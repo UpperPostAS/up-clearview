@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/up-clearview-welcome-and-index/","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/up-clearview-welcome-and-index/","tags":["gardenEntry"],"dgShowToc":true}
 ---
 
 **UP Clearview Documentation Hub**

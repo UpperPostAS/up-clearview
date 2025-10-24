@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/up-clearview-implementation-guide/"}
+{"dg-publish":true,"permalink":"/up-clearview-implementation-guide/","dgShowToc":true}
 ---
 
 **Complete Guide to Deploying UP Clearview to Any Supportive Housing Site**

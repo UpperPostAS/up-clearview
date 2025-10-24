@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/up-clearview-testing-guide/"}
+{"dg-publish":true,"permalink":"/up-clearview-testing-guide/","dgShowToc":true}
 ---
 
 **Comprehensive Testing Documentation**

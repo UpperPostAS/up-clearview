@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/up-clearview-development-roadmap/"}
+{"dg-publish":true,"permalink":"/up-clearview-development-roadmap/","dgShowToc":true}
 ---
 
 **Complete Task List for Remaining Work**

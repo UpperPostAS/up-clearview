@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/up-clearview-project-overview-and-current-state/"}
+{"dg-publish":true,"permalink":"/up-clearview-project-overview-and-current-state/","dgShowToc":true}
 ---
 
 **Version:** Wednesday Work - October 23, 2025

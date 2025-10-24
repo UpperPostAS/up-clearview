@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/up-clearview-data-sources/"}
+{"dg-publish":true,"permalink":"/up-clearview-data-sources/","dgShowToc":true}
 ---
 
 **SharePoint lists powering the application**
