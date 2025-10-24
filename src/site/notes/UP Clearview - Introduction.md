@@ -8,7 +8,7 @@
 
 ## About This Guide
 
-This document is the day-in-the-life walkthrough for service staff. It follows a participant from the moment a unit opens through move-out, highlighting which UP Clearview screens and workflows support each step. For overall project status, start at the [[UP Clearview - Project Overview & Current State\|documentation index]]. If you need implementation details, hop to the [[UP Clearview – Technical Documentation\|technical manual]] or the [[UP Clearview – Data Sources\|data source reference]].
+This document is the day-in-the-life walkthrough for service staff. It follows a participant from the moment a unit opens through move-out, highlighting which UP Clearview screens and workflows support each step. For overall orientation, start at the [[UP Clearview - Welcome & Index\|documentation hub]]. If you need implementation details, hop to the [[UP Clearview – Technical Documentation\|technical manual]] or the [[UP Clearview – Data Sources\|data source reference]].
 
 UP Clearview sits alongside existing CommonBond processes; this guide shows how the app keeps information in one place so staff always know the next action.
 

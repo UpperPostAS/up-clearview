@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/up-clearview-project-overview-and-current-state/","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/up-clearview-project-overview-and-current-state/"}
 ---
 
 **Version:** Wednesday Work - October 23, 2025
@@ -7,22 +7,9 @@
 
 ---
 
-## Welcome to UP Clearview
+## About This Report
 
-UP Clearview is CommonBond Communities' in-house operations hub for supportive housing. The app centralizes everything staff need—unit availability, referral pipeline, resident records, service providers, and bill-pay details—so teams can move people into housing faster and keep services coordinated without digging through spreadsheets.
-
-This page is the entry point into the documentation set. Start here to understand the latest product snapshot, then follow the linked guides for deeper dives.
-
-## Documentation Map
-
-- [[UP Clearview - Introduction\|Participant Journey Guide]] — Walks through the participant lifecycle in the app so front-line staff can see how Clearview supports day-to-day work.
-- [[UP Clearview – Technical Documentation\|Technical Architecture Manual]] — Explains canvas-app structure, variables, and engineering patterns for maintainers.
-- [[UP Clearview – Data Sources\|Data Source Reference]] — Defines every SharePoint list and lookup powering the app.
-- [[UP Clearview - Implementation Guide\|Implementation Playbook]] — Outlines how to replicate Clearview at another site, from schema prep to launch.
-- [[UP Clearview - Development Roadmap\|Development Roadmap]] — Tracks outstanding build work, priorities, and estimates.
-- [[UP Clearview - Testing Guide\|Testing Guide]] — Provides testing strategy, checklists, and debugging approaches for each workflow.
-
-Each linked document keeps to its focus area; circle back here any time you need orientation or quick status context.
+This summary captures the current health of UP Clearview—what already works, what still needs attention, and the priorities driving the next build cycle. For navigation across the rest of the documentation set, head to the [[UP Clearview - Welcome & Index\|documentation hub]].
 
 ## Platform Snapshot
 
