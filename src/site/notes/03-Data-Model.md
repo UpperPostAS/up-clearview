@@ -10,6 +10,38 @@ All UP Clearview data is stored in SharePoint Online lists. This document descri
 
 ---
 
+## Entity Relationship Diagram (v0.85)
+
+```mermaid
+%%{init: {'flowchart': {'useMaxWidth': true}, 'themeVariables': {'fontSize': '14px'}}}%%
+flowchart TD
+    Units["Units"]
+    CurrentResidents["Current Residents"]
+    ReferralsApplicants["Referrals & Applicants"]
+    UnitTypes["Unit Types"]
+    ServiceProviders["Service Providers"]
+    Agencies["Agencies"]
+    AccountInformation["Account Information"]
+    Exits["Exits"]
+    HouseholdMembers["Household Members<br/>(planned)"]:::planned
+
+    Units -->|"0..1 occupant<br/>via Occupant Household"| CurrentResidents
+    CurrentResidents -->|"1 unit<br/>via Unit Number"| Units
+    Units -->|"0..1 referral<br/>via Referral Household"| ReferralsApplicants
+    ReferralsApplicants -->|"1 unit<br/>via Unit Number"| Units
+    Units -->|"1 unit type"| UnitTypes
+    CurrentResidents -->|"0..n service providers"| ServiceProviders
+    ServiceProviders -->|"1 agency"| Agencies
+    CurrentResidents -->|"0..n accounts"| AccountInformation
+    CurrentResidents -->|"0..n household members"| HouseholdMembers
+    CurrentResidents -.->|"Exit Resident workflow"| Exits
+    ReferralsApplicants -.->|"Close-Out Referral workflow"| Exits
+
+    classDef planned stroke-dasharray: 5 5;
+```
+
+---
+
 ## Core Data Lists
 
 ### Units
