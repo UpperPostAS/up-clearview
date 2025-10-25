@@ -8,6 +8,8 @@
 
 **Current Status:** ~85% complete | Core workflows operational | Ready for small-site pilot testing
 
+**Documentation Status:** Recently refactored! Core reference docs and all screen/workflow docs are complete. Some guides still need to be streamlined from originals. See [RESTRUCTURING_COMPLETE.md](RESTRUCTURING_COMPLETE.md) for details.
+
 ---
 
 ## Quick Start
@@ -17,17 +19,19 @@
 - See [Current Status](02-Current-Status.md) for what's working and what's next
 
 **Using the App?**
-- [User Guide](11-User-Guide.md) - Day-in-the-life walkthrough for staff
 - [Data Model](03-Data-Model.md) - Understanding the SharePoint lists
+- Browse [Screens](screens/) or [Workflows](workflows/) for specific features
+- [Testing Guide](UP%20Clearview%20-%20Testing%20Guide.md) - Comprehensive testing procedures
 
 **Deploying to a New Site?**
-- [Implementation Guide](21-Implementation-Guide.md) - Complete deployment playbook
-- [Testing Checklist](22-Testing-Checklist.md) - Validation procedures
+- [Implementation Guide](UP%20Clearview%20-%20Implementation%20Guide.md) - Complete deployment playbook
+- Review [screens](screens/) and [workflows](workflows/) documentation
 
 **Building or Troubleshooting?**
-- [Architecture](04-Architecture.md) - How the app is structured
-- [Progressive Debugging](05-Progressive-Debugging.md) - Troubleshooting methodology
+- Browse [individual screen docs](screens/) for technical details
+- See [individual workflow docs](workflows/) for formulas and implementation
 - [Known Issues](09-Known-Issues.md) - Current bugs and workarounds
+- [Roadmap](10-Roadmap.md) - Development priorities
 
 ---
 
@@ -39,9 +43,10 @@
 - **[03 - Data Model](03-Data-Model.md)** - SharePoint schema, lists, and relationships
 
 ### Developer Reference
-- **[04 - Architecture](04-Architecture.md)** - Power Apps structure, design patterns, philosophy
-- **[05 - Progressive Debugging](05-Progressive-Debugging.md)** - How to troubleshoot when things break
-- **[06 - Component Reference](06-Component-Reference.md)** - Controls, formulas, common patterns
+*These detailed technical docs are planned - for now see individual screen/workflow docs and the original [Testing Guide](UP%20Clearview%20-%20Testing%20Guide.md)*
+- **04 - Architecture** *(planned)* - Power Apps structure, design patterns, philosophy
+- **05 - Progressive Debugging** *(planned)* - How to troubleshoot when things break
+- **06 - Component Reference** *(planned)* - Controls, formulas, common patterns
 
 ### Screens (Detailed Reference)
 - **[07a - UnitBrowseScreen](screens/07a-UnitBrowseScreen.md)** - Browse vacant and upcoming units
@@ -71,16 +76,20 @@
 - **[10 - Roadmap](10-Roadmap.md)** - Development priorities and future features
 
 ### User & Testing Guides
-- **[11 - User Guide](11-User-Guide.md)** - How to use UP Clearview (for staff)
-- **[12 - Testing Philosophy](12-Testing-Philosophy.md)** - Progressive debugging approach to testing
-- **[13 - Testing Procedures](13-Testing-Procedures.md)** - Screen and workflow test cases
-- **[14 - Test Data Setup](14-Test-Data-Setup.md)** - Creating test data in SharePoint
+*Streamlined focused guides are planned - for now use the comprehensive originals below*
+- **[UP Clearview - Testing Guide](UP%20Clearview%20-%20Testing%20Guide.md)** - Comprehensive testing procedures (original 60 KB guide)
+- **11 - User Guide** *(planned)* - Focused day-in-the-life walkthrough
+- **12 - Testing Philosophy** *(planned)* - Progressive debugging approach
+- **13 - Testing Procedures** *(planned)* - Screen and workflow test cases
+- **14 - Test Data Setup** *(planned)* - Creating test data in SharePoint
 
 ### Implementation & Deployment
-- **[21 - Implementation Guide](21-Implementation-Guide.md)** - Deploy UP Clearview to new sites
-- **[22 - Testing Checklist](22-Testing-Checklist.md)** - Pre-deployment validation
-- **[23 - Field Customization](23-Field-Customization.md)** - Adapting for different site types
-- **[24 - Rollout Strategy](24-Rollout-Strategy.md)** - Phased deployment plan
+*Streamlined focused guides are planned - for now use the comprehensive original below*
+- **[UP Clearview - Implementation Guide](UP%20Clearview%20-%20Implementation%20Guide.md)** - Complete deployment playbook (original 82 KB guide)
+- **21 - Implementation Guide** *(planned)* - Focused deployment procedures
+- **22 - Testing Checklist** *(planned)* - Pre-deployment validation
+- **23 - Field Customization** *(planned)* - Adapting for different site types
+- **24 - Rollout Strategy** *(planned)* - Phased deployment plan
 
 ---
 
@@ -112,11 +121,11 @@ See [Data Model](03-Data-Model.md) for complete schema.
 
 ## Navigation Tips
 
-- **Looking for specific functionality?** Check the screen or workflow guides
-- **Troubleshooting an issue?** Start with [Progressive Debugging](05-Progressive-Debugging.md)
+- **Looking for specific functionality?** Check the [screens](screens/) or [workflows](workflows/) directories
+- **Troubleshooting an issue?** See [Known Issues](09-Known-Issues.md) for bugs and workarounds
 - **Need to know if something works?** See [Current Status](02-Current-Status.md)
-- **Planning a deployment?** Follow the [Implementation Guide](21-Implementation-Guide.md)
-- **Can't find what you need?** Search all docs for keywords
+- **Planning a deployment?** Use the [Implementation Guide](UP%20Clearview%20-%20Implementation%20Guide.md)
+- **Can't find what you need?** Search all docs for keywords or check [RESTRUCTURING_COMPLETE.md](RESTRUCTURING_COMPLETE.md) for what changed
 
 ---
 
